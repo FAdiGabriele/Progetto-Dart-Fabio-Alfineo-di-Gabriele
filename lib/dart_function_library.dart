@@ -84,8 +84,11 @@ bool isPalindrome(String word) {
 */
 
 printRectagleArea(int base, int height) {
-  int result = base * height;
-  print(result);
+  print(getRectangleArea(base, height));
+}
+
+int getRectangleArea(int base, int height){
+  return base * height;
 }
 
 /** 
