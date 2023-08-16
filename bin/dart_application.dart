@@ -1,5 +1,5 @@
 import 'package:dart_project/dart_function_library.dart' as dart_application;
-import 'Persona.dart';
+import 'package:dart_project/Persona.dart';
 
 void main(List<String> arguments) {
   print("Richiesta 1");
