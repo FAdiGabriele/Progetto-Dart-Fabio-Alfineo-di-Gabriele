@@ -110,4 +110,99 @@ void main() {
     expect(student.getId(), "codice_studente");
     expect(student.getAge(), 20);
   });
+
+  Professor professor1 = Professor("Osvaldo", "Palerma", "NG26021006", 35);
+  Professor professor2 = Professor("Ermenegilda", "Rossi", "NM78873113", 60);
+  Professor professor3 = Professor("Eliano", "Rossi", "NG26021006", 53);
+  Professor professor4 = Professor("Lilla", "Rizzo", "QP41455718", 47);
+  Professor professor5 = Professor("Emilia", "Micheli", "KT96703593", 62);
+  Professor professor6 = Professor("Liberato", "Mancini", "BY55323363", 32);
+  Professor professor7 = Professor("Geremia", "Romani", "NG26021006", 56);
+  Professor professor8 = Professor("Ettore", "Viola", "HB62005568", 54);
+  Professor professor9 = Professor("Rosina ", "Milani", "OM50810914", 46);
+
+  Student student1 = Student("Fabio Alfineo", "di Gabriele", "TU22619797", 24);
+  Student student2 = Student("Romilda ", "Rossi", "WY15952860", 25);
+  Student student3 = Student("Roberto", "Rossi", "PJ23135082", 23);
+  Student student4 = Student("Emilio", "Binchi", "UD98594171", 34);
+  Student student5 = Student("Gennaro", "Schiavone", "OL57039509", 27);
+  Student student6 = Student("Marco", "Zito", "FS34282773", 33);
+  Student student7 = Student("Benedetto", "Rossi", "PJ23135082", 19);
+  Student student8 = Student("Maria", "Arcuri", "JG90614371", 29);
+
+  List<Professor> professors = [
+    professor1,
+    professor2,
+    professor3,
+    professor4,
+    professor5,
+    professor6,
+    professor7,
+    professor8,
+    professor9,
+  ];
+
+  List<Student> students = [
+    student1,
+    student2,
+    student3,
+    student4,
+    student5,
+    student6,
+    student7,
+    student8,
+  ];
+
+  University university = University(professors, students);
+
+  test("searchProfessorsById when id is empty", () {
+    expect(university.searchProfessorsById(""), []);
+  });
+
+  test("searchProfessorsById when id is unique", () {
+    expect(university.searchProfessorsById("HB62005568"), [professor8]);
+  });
+
+  test("searchProfessorsById when id is duplicated", () {
+    expect(university.searchProfessorsById("NG26021006"),
+        [professor1, professor3, professor7]);
+  });
+
+  test("searchProfessorsBySurname when surname is empty", () {
+    expect(university.searchProfessorsBySurname(""), []);
+  });
+
+  test("searchProfessorsBySurname when surname is unique", () {
+    expect(university.searchProfessorsBySurname("Mancini"), [professor6]);
+  });
+
+  test("searchProfessorsBySurname when surname is duplicated", () {
+    expect(university.searchProfessorsBySurname("Rossi"),
+        [professor2, professor3]);
+  });
+
+  test("searchStudentsById when id is empty", () {
+    expect(university.searchStudentsById(""), []);
+  });
+
+  test("searchStudentsById when id is unique", () {
+    expect(university.searchStudentsById("TU22619797"), [student1]);
+  });
+
+  test("searchStudentsById when id is duplicated", () {
+    expect(university.searchStudentsById("PJ23135082"), [student3, student7]);
+  });
+
+  test("searchStudentsBySurname when surname is empty", () {
+    expect(university.searchStudentsBySurname(""), []);
+  });
+
+  test("searchStudentsBySurname when surname is unique", () {
+    expect(university.searchStudentsBySurname("Arcuri"), [student8]);
+  });
+
+  test("searchStudentsBySurname when surname is duplicated", () {
+    expect(university.searchStudentsBySurname("Rossi"),
+        [student2, student3, student7]);
+  });
 }
