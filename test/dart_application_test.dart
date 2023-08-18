@@ -26,6 +26,22 @@ void main() {
     expect(getSommaProdotto(3, 3), 18);
   });
 
+  test('isPraticExamGradeNotValid true', () {
+    expect(isPraticExamGradeNotValid(-3), true);
+  });
+
+    test('isPraticExamGradeNotValid false', () {
+    expect(isPraticExamGradeNotValid(18), false);
+  });
+
+    test('isWrittenExamGradeNotValid true', () {
+    expect(isPraticExamGradeNotValid(-8), true);
+  });
+
+    test('isWrittenExamGradeNotValid false', () {
+    expect(isPraticExamGradeNotValid(1), false);
+  });
+
   test("getExameGrade invalid praticExamGrade", () {
     expect(getExameGrade(-3, 4), "Prova Pratica non valida");
   });

@@ -22,6 +22,6 @@ void main(List<String> arguments) {
 
   print("\nRichiesta 6");
 
-  Persona("Mario", "Rossi", "mario.rossi@email.it", "Persona1_2023", "01/01/1990");
-  Persona("Luigi", "Bianchi", "luigi.bianchi@email.it", "Persona2_2023", "01/06/1980");
+  print(Persona("Mario", "Rossi", "mario.rossi@email.it", "Persona1_2023", "01/01/1990"));
+  print(Persona("Luigi", "Bianchi", "luigi.bianchi@email.it", "Persona2_2023", "01/06/1980"));
 }
