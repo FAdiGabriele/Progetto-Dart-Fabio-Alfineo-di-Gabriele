@@ -1,13 +1,13 @@
 //#region Richiesta 6
 ///Data la classe Persona, richiama nel main due differenti oggetti aventi nome, cognome, email, password e data di nascita.
-class Persona {
-  final String nome;
-  final String cognome;
+class Person {
+  final String name;
+  final String surname;
   final String email;
   final String password;
-  final String dataDiNascita;
+  final String dateOfBirth;
 
-  Persona(
-      this.nome, this.cognome, this.email, this.password, this.dataDiNascita);
+  Person(
+      this.name, this.surname, this.email, this.password, this.dateOfBirth);
 }
 //#endregion

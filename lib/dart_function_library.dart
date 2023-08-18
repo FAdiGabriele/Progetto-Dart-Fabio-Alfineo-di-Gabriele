@@ -103,11 +103,11 @@ int getRectangleArea(int base, int height){
 
 */
 
-printSommaProdotto(int firstValue, int secondValue) {
-  print(getSommaProdotto(firstValue, secondValue));
+printSumOrTripleSumOfEquals(int firstValue, int secondValue) {
+  print(getSumOrTripleSumOfEquals(firstValue, secondValue));
 }
 
-int getSommaProdotto(int firstValue, int secondValue){
+int getSumOrTripleSumOfEquals(int firstValue, int secondValue){
   int result = firstValue + secondValue;
   if (firstValue == secondValue) {
     result *= 3;
@@ -131,7 +131,7 @@ int getSommaProdotto(int firstValue, int secondValue){
 
 */
 
-String getExameGrade(int praticExamGrade, int writtenExamGrade) {
+String getExamGrade(int praticExamGrade, int writtenExamGrade) {
   if (isPraticExamGradeNotValid(praticExamGrade)) {
     return "Prova Pratica non valida";
   }
