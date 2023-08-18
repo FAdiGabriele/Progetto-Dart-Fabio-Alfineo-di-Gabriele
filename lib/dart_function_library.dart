@@ -170,15 +170,13 @@ String getFinalResult(int finalGrade){
 
 */
 double getAverage(List<int> numberList){
-  int counter = 0;
   int sum = 0;
 
   for (var element in numberList) { 
-      counter++;
       sum += element;
   }
 
-  double result = counter/sum;
+  double result = sum/numberList.length;
 
   return result;
 }
