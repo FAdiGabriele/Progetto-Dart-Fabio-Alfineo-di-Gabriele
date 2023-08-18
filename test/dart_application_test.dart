@@ -92,23 +92,22 @@ void main() {
   });
 
   test("create docente works", () {
-    Professor docente =
+    Professor professor =
         Professor("nome_docente", "cognome_docente", "codice_docente", 38);
 
-    expect(docente.getName(), "nome_docente");
-    expect(docente.getSurname(), "cognome_docente");
-    expect(docente.getId(), "codice_docente");
-    expect(docente.getAge(), 38);
+    expect(professor.getName(), "nome_docente");
+    expect(professor.getSurname(), "cognome_docente");
+    expect(professor.getId(), "codice_docente");
+    expect(professor.getAge(), 38);
   });
 
   test("create studente works", () {
-    Student studente =
+    Student student =
         Student("nome_studente", "cognome_studente", "codice_studente", 20);
 
-    expect(studente.getName(), "nome_studente");
-    expect(studente.getSurname(), "cognome_studente");
-    expect(studente.getId(), "codice_studente");
-    expect(studente.getAge(), 20);
+    expect(student.getName(), "nome_studente");
+    expect(student.getSurname(), "cognome_studente");
+    expect(student.getId(), "codice_studente");
+    expect(student.getAge(), 20);
   });
 }
-                                                            
