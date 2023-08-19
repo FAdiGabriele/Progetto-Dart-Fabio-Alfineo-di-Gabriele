@@ -21,7 +21,7 @@
 */
 printTriangle(int triangleSize) {
   if (triangleSize < 2) {
-    print("Non riesco a realizzare un triangolo :(");
+    print("Non ho abbastanza linee per realizzare un triangolo");
   }
 
   String result = "";
