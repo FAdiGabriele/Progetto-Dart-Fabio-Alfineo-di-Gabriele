@@ -1,24 +1,21 @@
-// ignore_for_file: slash_for_doc_comments
-/** 
-  Richiesta 1
- 
-  Completa la funzione.
+//#region Richiesta 1
 
-  Stampa a video questa figura:
+///  Completa la funzione.
+///
+///  Stampa a video questa figura:
+///
+///  ******
+///  
+///  *****
+///
+///  ****
+///
+///  ***
+///
+///  **
+///
+///  *
 
-  ******
-  
-  *****
-
-  ****
-
-  ***
-
-  **
-
-  *
-
-*/
 printTriangle(int triangleSize) {
   if (triangleSize < 2) {
     print("Non ho abbastanza linee per realizzare un triangolo");
@@ -43,15 +40,13 @@ printTriangle(int triangleSize) {
 
   print(result);
 }
+//#endregion
 
-/** 
-  Richiesta 2
+//#region Richiesta 2
 
-  Data la stringa “ingegni”, verifica se è una parola palindroma, in tal caso stampa “La stringa è palindroma”, altrimenti “La stringa non è palindroma”.
-
-   Per esempio, se la stringa ha il valore esempio “ingegni” → stampa “La stringa è palindroma”.
-
-*/
+///  Data la stringa “ingegni”, verifica se è una parola palindroma, in tal caso stampa “La stringa è palindroma”, altrimenti “La stringa non è palindroma”.
+///
+///  Per esempio, se la stringa ha il valore esempio “ingegni” → stampa “La stringa è palindroma”.
 
 printIsPalindrome(String word) {
   if (word.isEmpty) {
@@ -75,13 +70,11 @@ bool isPalindrome(String word) {
   }
   return true;
 }
+//#endregion
 
-/** 
-  Richiesta 3
+//#region Richiesta 3
 
-  Completa la funzione in modo tale che stampi l’area del rettangolo avendo come parametri l’altezza e la base. 
-
-*/
+/// Completa la funzione in modo tale che stampi l’area del rettangolo avendo come parametri l’altezza e la base. 
 
 printRectagleArea(int base, int height) {
   print(getRectangleArea(base, height));
@@ -90,18 +83,16 @@ printRectagleArea(int base, int height) {
 int getRectangleArea(int base, int height){
   return base * height;
 }
+//#endregion
+ 
+//#region Richiesta 4
 
-/** 
-  Richiesta 4
-
-  Completa la funzione in modo tale che stampi la somma di due numeri interi, se i due valori sono uguali fai la stampa del triplo della loro somma.
-
-   Per esempio:
-
-    Inseriti 2, 3 → stampa 5
-    Inseriti 2, 2 → stampa 12 (perchè (2+2) * 3 = 12)
-
-*/
+///  Completa la funzione in modo tale che stampi la somma di due numeri interi, se i due valori sono uguali fai la stampa del triplo della loro somma.
+///
+///  Per esempio:
+///
+///    Inseriti 2, 3 → stampa 5
+///    Inseriti 2, 2 → stampa 12 (perchè (2+2) * 3 = 12)
 
 printSumOrTripleSumOfEquals(int firstValue, int secondValue) {
   print(getSumOrTripleSumOfEquals(firstValue, secondValue));
@@ -114,22 +105,21 @@ int getSumOrTripleSumOfEquals(int firstValue, int secondValue){
   }
   return result;
 }
+//#endregion
 
 //#region Richiesta 5
-/** 
-  Scrivi la funzione che calcoli il risultato dell’esame di uno studente. 
 
-  Il voto ottenuto nella prova scritta può variare da +8 a -8.
-
-  Il voto ottenuto nella prova pratica può variare da 0 a 24.
-
-  Il risultato finale è la somma dei dati di pratica e di teoria.
-
-  Se lo studente prende come voto 18 è promosso, se prende meno è bocciato.
-
-  Se il voto complessivo tra teoria e pratica fa 31 o 32, il risultato sarà 30 e lode.
-
-*/
+/// Scrivi la funzione che calcoli il risultato dell’esame di uno studente. 
+///
+///  Il voto ottenuto nella prova scritta può variare da +8 a -8.
+///
+///  Il voto ottenuto nella prova pratica può variare da 0 a 24.
+///
+///  Il risultato finale è la somma dei dati di pratica e di teoria.
+///
+///  Se lo studente prende come voto 18 è promosso, se prende meno è bocciato.
+///
+///  Se il voto complessivo tra teoria e pratica fa 31 o 32, il risultato sarà 30 e lode.
 
 String getExamGrade(int praticExamGrade, int writtenExamGrade) {
   if (isPraticExamGradeNotValid(praticExamGrade)) {
@@ -165,10 +155,9 @@ String getFinalResult(int finalGrade){
 //#endregion
 
 //#region Richiesta 7
-/**
-  Dato un array di interi calcola la media dei numeri all’interno dell’array. 
 
-*/
+///  Dato un array di interi calcola la media dei numeri all’interno dell’array. 
+
 double getAverage(List<int> numberList){
   int sum = 0;
 
