@@ -1,5 +1,6 @@
 //#region Richiesta 6
-///Data la classe Persona, richiama nel main due differenti oggetti aventi nome, cognome, email, password e data di nascita.
+
+/// Data la classe Persona, richiama nel main due differenti oggetti aventi nome, cognome, email, password e data di nascita.
 class Person {
   final String name;
   final String surname;

@@ -1,26 +1,21 @@
-// ignore: slash_for_doc_comments
-/** 
+//#region Richiesta 8
  
- Richiesta 8
- 
- Scrivi una classe astratta di tipo Persona che abbia come parametri nome, cognome, codice ed età. 
-
- Scrivi una classe Docente che estende la classe Persona e rappresenti le seguenti informazioni relative a un docente: nome, cognome, codice ed età (da classe astratta), e contenga i metodi getCodice, getCognome, GetNome e getEta che restituiscono rispettivamente il codice, il cognome, il nome e l’età del docente. 
-
- Scrivi una classe Studenti che rappresenti le seguenti informazioni relative a uno studente e i get come sopra (che estende anch’essa la classe astratta): nome, cognome, età e codice.
-
- Scrivi poi una classe Università, che rappresenti un insieme di docenti universitari tramite un array di tipo Docente e un insieme di studenti (array di studenti).
-
- Inserisci nell’Univeristà i seguenti metodi: 
-
- - cercaDocentiByCodice
- - cercaDocentiByCognome
- - cercaStudentiByCodice
- - cercaStudenteByCognome
- - mediaEtàStudenti
- - mediaEtàDocenti
-
-*/
+/// Scrivi una classe astratta di tipo Persona che abbia come parametri nome, cognome, codice ed età. 
+///
+/// Scrivi una classe Docente che estende la classe Persona e rappresenti le seguenti informazioni relative a un docente: nome, cognome, codice ed età (da classe astratta), e contenga i metodi getCodice, getCognome, GetNome e getEta che restituiscono rispettivamente il codice, il cognome, il nome e l’età del docente. 
+///
+/// Scrivi una classe Studenti che rappresenti le seguenti informazioni relative a uno studente e i get come sopra (che estende anch’essa la classe astratta): nome, cognome, età e codice.
+///
+/// Scrivi poi una classe Università, che rappresenti un insieme di docenti universitari tramite un array di tipo Docente e un insieme di studenti (array di studenti).
+///
+/// Inserisci nell’Univeristà i seguenti metodi: 
+///
+/// - cercaDocentiByCodice
+/// - cercaDocentiByCognome
+/// - cercaStudentiByCodice
+/// - cercaStudenteByCognome
+/// - mediaEtàStudenti
+/// - mediaEtàDocenti
 
 abstract class Person {
   final String name;
@@ -159,3 +154,4 @@ class University {
     return totalAge / professors.length;
   }
 }
+//#endregion
